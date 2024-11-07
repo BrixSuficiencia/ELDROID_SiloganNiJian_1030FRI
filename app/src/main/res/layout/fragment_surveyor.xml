@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE0"
+    tools:context=".SurveyorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/appbar"/>
+
+
+        <EditText
+            android:id="@+id/SearchBar"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginTop="40dp"
+            android:background="@color/white"
+            android:fontFamily="@font/generalsans"
+            android:hint="Search for Surveyor"
+            android:padding="10dp"
+            android:paddingRight="80dp"
+            android:textSize="45px" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/expertrecycler"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_margin="35dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Advance"
+            android:clickable="true"
+            tools:listitem="@layout/recyclerviewexperts" />
+
+        <Button
+            android:id="@+id/AddExprtbtn"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/expertrecycler"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custombutton"
+            android:backgroundTint="#C7CA7C"
+            android:fontFamily="@font/clashforgrotesk"
+            android:padding="5dp"
+            android:shadowColor="#90a36a"
+            android:text="Add"
+            android:textColor="#2C4434"
+            android:textSize="25sp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

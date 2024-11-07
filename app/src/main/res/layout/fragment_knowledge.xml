@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2"
+        tools:context=".KnowledgeFragment">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/appbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBar"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            tools:listitem="@layout/knowledge_item" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/recyclerView"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custombutton"
+            android:backgroundTint="#C7CA7C"
+            android:fontFamily="@font/clashforgrotesk"
+            android:padding="5dp"
+            android:shadowColor="#90a36a"
+            android:text="Add"
+            android:textColor="#2C4434"
+            android:textSize="25sp"
+            android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
+</ScrollView>

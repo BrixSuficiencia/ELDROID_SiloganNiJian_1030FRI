@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/recycler_card">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="1">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/appBar"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noprofile"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        app:shapeAppearanceOverlay="@style/roundImageView"/>
+
+        <LinearLayout
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:orientation="horizontal"
+            android:background="@drawable/heatmess">
+
+            <ImageButton
+                android:id="@+id/Heart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="#1F3223"
+                android:scaleType="fitCenter"
+                android:src="@drawable/favorite"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/Message"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="#1F3223"
+                android:scaleType="fitCenter"
+                android:src="@drawable/message"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/clashforgrotesk"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/specialtyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/generalsans"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/FixedPrice"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/generalsans"
+            android:text="Fixed Price"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/generalsans"
+            android:text="Php "
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/card_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/proposalpic"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/proposals" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/generalsans"
+                    android:text="Proposals:"
+                    android:textColor="#1F3223" />
+
+                <TextView
+                    android:id="@+id/proposalsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#1F3223"
+                    android:fontFamily="@font/generalsans_semibold"
+                    android:text="18" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/locpic"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/LocationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Banilad Cebu"
+                    android:textColor="#1F3223"
+                    android:fontFamily="@font/generalsans_semibold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/introductionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:text="Hello World"
+            android:textSize="15sp"
+            android:textColor="#1F3223"
+            android:fontFamily="@font/clashforgrotesk"/>
+
+        <TextView
+            android:id="@+id/More"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textColor="#1F3223"
+            android:fontFamily="@font/generalsans_semibold"
+            android:textSize="30px"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

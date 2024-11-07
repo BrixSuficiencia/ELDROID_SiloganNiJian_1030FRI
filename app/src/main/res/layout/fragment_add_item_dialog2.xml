@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFFFE0"
+    tools:context=".SurveyorFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/InputName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:hint="Name"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_background"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <EditText
+            android:id="@+id/InputSpecialty"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/InputName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:hint="Specialty"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_background"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <EditText
+            android:id="@+id/InputIntroduction"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/InputSpecialty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:hint="Introduction"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_background"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <EditText
+            android:id="@+id/InputPrice"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/InputIntroduction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:hint="Price"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:background="@drawable/edittext_background"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <Button
+            android:padding="10dp"
+            android:backgroundTint="#C7CA7C"
+            android:background="@drawable/custombutton"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/InputPrice"
+            android:id="@+id/SaveExprtbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

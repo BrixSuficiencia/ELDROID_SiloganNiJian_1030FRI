@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Surveyor"
+        android:icon="@drawable/landsurveyor"
+        android:id="@+id/surveyorBtn"/>
+    <item android:title="Expert"
+        android:icon="@drawable/expert"
+        android:id="@+id/expertBtn"/>
+    <item android:title="Knowledge"
+        android:icon="@drawable/knowledge"
+        android:id="@+id/knowledgeBtn"/>
+    <item android:title="User"
+        android:icon="@drawable/user"
+        android:id="@+id/userBtn"/>
+</menu>

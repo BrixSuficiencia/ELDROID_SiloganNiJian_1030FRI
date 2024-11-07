@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716481156916",
+    "project_id": "login-register-firebase-60cf2",
+    "storage_bucket": "login-register-firebase-60cf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716481156916:android:4be17c948314e6eb8af761",
+        "android_client_info": {
+          "package_name": "com.gereso.terramasterhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIJ56Q5JUueTSEx4w2Z22PeCTVVER0Zvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

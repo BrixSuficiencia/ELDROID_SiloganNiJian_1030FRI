@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="#F8F1C3">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:clickable="true"
+        android:src="@drawable/back2"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:focusable="true"/>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:id="@+id/logo_id"
+        android:layout_width="153dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/terramasterhubicon" />
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_id"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/clashforgrotesk"
+        android:textColor="#1F3223"
+        android:textFontWeight="600"
+        android:text="Sign Up"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/textfirstname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:hint="First Name"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_drive_file_rename_outline_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/generalsans_semibold"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+
+
+    <EditText
+        android:id="@+id/textlastname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textfirstname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="Last Name"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_drive_file_rename_outline_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/generalsans_semibold"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+
+
+    <EditText
+        android:id="@+id/textusername"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textlastname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="10dp"
+        android:maxLines="1"
+        android:fontFamily="@font/generalsans_semibold"
+        android:hint="Nick Name"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+
+
+    <EditText
+        android:id="@+id/textemail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textusername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/generalsans_semibold"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:hint="Email Address"
+        android:padding="10dp"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+
+
+    <EditText
+        android:id="@+id/textpassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textemail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/generalsans_semibold"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:textColorHint="@color/white"
+        android:hint="Sign Up"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textpassword"
+        android:layout_width="236dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#C7CA7C"
+        android:fontFamily="@font/clashforgrotesk"
+        android:shadowColor="#90a36a"
+        android:textColor="#2C4434"
+        android:background="@drawable/custombutton"
+        android:text="Sign In"
+        android:padding="5dp"
+        android:textSize="25sp"/>
+    
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+    
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backgroundbottomimage" />
+
+</RelativeLayout>

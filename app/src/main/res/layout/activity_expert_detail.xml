@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFE0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:clickable="true"
+        android:src="@drawable/back2"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:focusable="true"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/card_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/expertdp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/appBar"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundImageView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/clashforgrotesk"
+                    android:paddingRight="10dp"
+                    android:text="John Doe"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/specialtyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/generalsans"
+                    android:text="Tax Permitter"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp">
+
+            <!-- The card background with border -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/card_background"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="27dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/introductionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/generalsans"
+                    android:justificationMode="inter_word"
+                    android:text="Hi, I'm John Doe, a professional land surveyor with over 15 years of experience. I hold a degree in Geomatics Engineering and am licensed in multiple states. My expertise spans urban developments, property boundary surveys, and infrastructure projects. I am passionate about precision and committed to using the latest technologies to deliver accurate results for my clients."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#FFFFE0"
+                android:fontFamily="@font/clashgrotesk_semibold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Introduction"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:translationY="-3dp" /> <!-- Adjust this value to position the label correctly -->
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/card_background"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp">
+
+
+                <TextView
+                    android:id="@+id/priceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/generalsans"
+                    android:text="Php "
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#FFFFE0"
+                android:fontFamily="@font/clashgrotesk_semibold"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Fixed Price"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:translationY="-3dp" /> <!-- Adjust this value to position the label correctly -->
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/card_background"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingTop="18dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="20dp">
+
+
+                    <TextView
+                        android:id="@+id/Proposals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/proposals"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/generalsans"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#FFFFE0"
+                    android:fontFamily="@font/clashgrotesk_semibold"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Proposals"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:translationY="-3dp" /> <!-- Adjust this value to position the label correctly -->
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/card_background"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingTop="18dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="20dp">
+
+
+                    <TextView
+                        android:id="@+id/Location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/location"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/generalsans"
+                        android:text=" "
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#FFFFE0"
+                    android:fontFamily="@font/clashgrotesk_semibold"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="Locations"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:translationY="-3dp" /> <!-- Adjust this value to position the label correctly -->
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-20dp">
+
+            <ImageButton
+                android:id="@+id/Heart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="#1F3223"
+                android:scaleType="fitCenter"
+                android:src="@drawable/favorite"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/Message"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="#1F3223"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:src="@drawable/message"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
