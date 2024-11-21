@@ -1,0 +1,42 @@
+<!-- item_surveyor.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textName"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surveyor Name" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="surveyoremail@example.com" />
+
+    <TextView
+        android:id="@+id/textCertification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Certification ID"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textLicense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="License Number"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textPricing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pricing"
+        android:textSize="16sp" />
+</LinearLayout>
