@@ -39,13 +39,13 @@
         android:textSize="50sp" />
 
     <EditText
-        android:id="@+id/textfirstname"
+        android:id="@+id/textname"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/firstname"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:hint="First Name"
+        android:hint="Name"
         android:maxLines="1"
         android:padding="10dp"
         android:textSize="18sp"
@@ -58,33 +58,11 @@
         tools:layout_editor_absoluteY="220dp" />
 
 
-
     <EditText
-        android:id="@+id/textlastname"
+        android:id="@+id/textusertype"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textfirstname"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:hint="Last Name"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:textSize="18sp"
-        android:background="@drawable/edittext_background"
-        android:drawableLeft="@drawable/ic_baseline_drive_file_rename_outline_24"
-        android:drawablePadding="10dp"
-        android:fontFamily="@font/generalsans_semibold"
-        android:textColor="@color/black"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="220dp" />
-
-
-
-    <EditText
-        android:id="@+id/textusername"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textlastname"
+        android:layout_below="@+id/textname"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
@@ -92,7 +70,7 @@
         android:drawablePadding="10dp"
         android:maxLines="1"
         android:fontFamily="@font/generalsans_semibold"
-        android:hint="Nick Name"
+        android:hint="User Type"
         android:padding="10dp"
         android:textSize="18sp"
         android:textColor="@color/black"
@@ -105,7 +83,7 @@
         android:id="@+id/textemail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textusername"
+        android:layout_below="@+id/textusertype"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_background"
