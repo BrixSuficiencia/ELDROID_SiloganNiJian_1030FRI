@@ -2,6 +2,7 @@ package com.gereso.terramasterhub
 
 import LoginRequest
 import LoginResponse
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -10,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.google.gson.Gson
 
 class LoginActivity : AppCompatActivity() {
 
@@ -38,11 +38,14 @@ class LoginActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                         progressBar.visibility = View.GONE // Hide progress bar once response is received
                         if (response.isSuccessful) {
-                            // Handle successful login response
                             val loginResponse = response.body()
-                            if (loginResponse != null && loginResponse.success) {
-                                // Save user data or token if needed (e.g., shared preferences or local database)
+                            if (loginResponse != null && loginResponse.message == "Login Successful") {
+                                // Save user data or token temporarily in SharedPreferences
+                                saveLoginData(loginResponse)
+
                                 Toast.makeText(baseContext, "Login Successful", Toast.LENGTH_SHORT).show()
+
+                                // Redirect to HomePageActivity
                                 val intent = Intent(this@LoginActivity, HomePageActivity::class.java)
                                 startActivity(intent)
                                 finish() // Close login activity
@@ -79,5 +82,16 @@ class LoginActivity : AppCompatActivity() {
             return false
         }
         return true
+    }
+
+    private fun saveLoginData(loginResponse: LoginResponse) {
+        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("token", loginResponse.token)
+        editor.putString("user_id", loginResponse.user.id)
+        editor.putString("user_name", loginResponse.user.name)
+        editor.putString("user_email", loginResponse.user.email)
+        editor.putString("user_type", loginResponse.user.user_type)
+        editor.apply() // Save the changes
     }
 }

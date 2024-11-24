@@ -78,42 +78,6 @@
         android:paddingRight="30dp">
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/clashforgrotesk"
-            android:text="Nick Name"
-            android:textColor="#6B6805"
-            android:layout_weight="1"
-            android:textFontWeight="600"
-            android:textSize="28sp" />
-
-
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_baseline_drive_file_rename_outline_24"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/clashforgrotesk"
-            android:gravity="end"
-            android:textSize="18sp"
-            android:layout_weight="1"
-            android:textColor="#6B6805"
-            android:layout_marginTop="20dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp">
-
-        <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
