@@ -7,7 +7,7 @@ data class RegisterRequest(
     val user_type: String,
     val certification_id: String,
     val license_number: String,
-    val pricing: Int
+    // val pricing: Int
 )
 
 

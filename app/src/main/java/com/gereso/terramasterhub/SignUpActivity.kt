@@ -46,7 +46,7 @@ class SignUpActivity : AppCompatActivity() {
                 // Add static values for certification_id, license_number, and pricing
                 val certification_id = "temp" // Temporary certification ID
                 val license_number = "temp" // Temporary license number
-                val pricing = 0 // Default pricing value
+                // val pricing = 0 // Default pricing value
 
                 // Create registration request object
                 val registerRequest = RegisterRequest(
@@ -55,8 +55,8 @@ class SignUpActivity : AppCompatActivity() {
                     password = password,
                     user_type = user_type,
                     certification_id = certification_id,
-                    license_number = license_number,
-                    pricing = pricing
+                    license_number = license_number
+                    // pricing = pricing
                 )
 
                 // Send API request for user registration

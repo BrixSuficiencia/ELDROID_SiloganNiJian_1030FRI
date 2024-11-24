@@ -87,7 +87,6 @@ class UserFragment : Fragment() {
 
                         // Set the values to TextViews
                         binding.textView4.text = name
-                        binding.textView5.text = username
                         binding.textView7.text = email
 
                         // Set user image using Glide
@@ -110,7 +109,6 @@ class UserFragment : Fragment() {
         } else {
             // Set default values if user is not logged in
             binding.textView4.text = "Name not available"
-            binding.textView5.text = "Username not available"
             binding.textView7.text = "Email not available"
         }
     }
