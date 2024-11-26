@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Fragment5">
+    tools:context=".data.view.fragments.Fragment5">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- RecyclerView to display the list of updates -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewUpdates"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:scrollbars="vertical" />
 
 </FrameLayout>

@@ -33,11 +33,4 @@
         android:text="License Number"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textPricing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pricing"
-        android:textSize="16sp" />
-
 </LinearLayout>

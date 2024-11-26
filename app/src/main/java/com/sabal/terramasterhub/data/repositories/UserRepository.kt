@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.sabal.terramasterhub.data.network.MyApi
-import com.sabal.terramasterhub.ui.auth.ProfileUpdateRequest
+import com.sabal.terramasterhub.data.model.ProfileUpdateRequest
 import com.sabal.terramasterhub.util.PrefManager
 import okhttp3.ResponseBody
 import org.json.JSONObject
@@ -13,13 +13,12 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class UserRepository(private val api: MyApi) {
+    class UserRepository(private val api: MyApi) {
 
-    // Function to log in the user
-    fun userLogin(email: String, password: String): LiveData<String> {
+        fun userLogin(email: String, password: String): LiveData<String> {
         val loginResponse = MutableLiveData<String>()
 
-        api.userLogin(email, password).enqueue(object : Callback<ResponseBody> {
+            api.userLogin(email, password).enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
                     loginResponse.value = response.body()?.string()
@@ -47,14 +46,12 @@ class UserRepository(private val api: MyApi) {
         user_type: String?,
         certification_id: String?,
         license_number: String?,
-        pricing: Int?
     ): LiveData<String> {
         val registerResponse = MutableLiveData<String>()
 
         api.userRegister(name, email, password, user_type ?: ""
             , certification_id ?: "",
-            license_number ?: "",
-            pricing ?: 0)
+            license_number ?: "")
             .enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                     if (response.isSuccessful) {

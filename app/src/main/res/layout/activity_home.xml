@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeActivity">
+    tools:context=".data.view.HomeActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
-        android:name="com.sabal.terramasterhub.ui.Fragment1"
+        android:name="com.sabal.terramasterhub.data.view.fragments.Fragment1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
         android:layout_marginBottom="100dp"/>

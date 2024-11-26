@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.sabal.terramasterhub.ui.auth.AuthViewModel" />
+            type="com.sabal.terramasterhub.data.viewmodel.AuthViewModel" />
     </data>
 
     <LinearLayout
@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".ui.auth.SignupActivity">
+        tools:context=".data.view.SignupActivity">
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -69,15 +69,6 @@
             android:layout_height="wrap_content"
             android:hint="License Number"
             android:text="@={viewmodel.license_number}"
-            android:layout_marginTop="16dp" />
-
-        <EditText
-            android:id="@+id/et_pricing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Pricing"
-            android:inputType="number"
-            android:text="@={viewmodel.pricing}"
             android:layout_marginTop="16dp" />
 
         <Button

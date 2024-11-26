@@ -1,16 +1,26 @@
 package com.sabal.terramasterhub.data.network
 
-import com.sabal.terramasterhub.ui.auth.ProfileUpdateRequest
-import com.sabal.terramasterhub.ui.home.ConsultationRequest
-import com.sabal.terramasterhub.ui.home.ConsultationRequestSurveyor
-import com.sabal.terramasterhub.ui.home.Expert
-import com.sabal.terramasterhub.ui.home.ExpertsResponse
-import com.sabal.terramasterhub.ui.home.RequestUpdate
-import com.sabal.terramasterhub.ui.home.RequestsResponse
-import com.sabal.terramasterhub.ui.home.SurveyorsResponse
+
+import com.sabal.terramasterhub.data.model.ConsultationAcceptDeclineResponse
+import com.sabal.terramasterhub.data.model.ConsultationLogResponse
+import com.sabal.terramasterhub.data.model.ConsultationRequestExpert
+import com.sabal.terramasterhub.data.model.ConsultationRequestSurveyor
+import com.sabal.terramasterhub.data.model.ConsultationRequestsResponse
+import com.sabal.terramasterhub.data.model.ConsultationResponse
+import com.sabal.terramasterhub.data.model.DashboardResponse
+import com.sabal.terramasterhub.data.model.DeleteResponse
+import com.sabal.terramasterhub.data.model.ProfileUpdateRequest
+import com.sabal.terramasterhub.data.model.ExpertsResponse
+import com.sabal.terramasterhub.data.model.RequestResponse
+import com.sabal.terramasterhub.data.model.RequestUpdate
+import com.sabal.terramasterhub.data.model.SurveyorsResponse
+import com.sabal.terramasterhub.data.model.Update
+import com.sabal.terramasterhub.data.model.UpdatePostResponse
+import com.sabal.terramasterhub.data.model.UpdateResponse
+import com.sabal.terramasterhub.data.model.UserResponse
+import okhttp3.Response
 import okhttp3.ResponseBody
 import retrofit2.Call
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
@@ -26,10 +36,10 @@ import retrofit2.http.Path
 interface MyApi {
 
     @FormUrlEncoded
-    @POST("login")
-    fun userLogin(
-        @Field("email") email: String,
-        @Field("password") password: String
+        @POST("login")
+        fun userLogin(
+    @Field("email") email: String,
+    @Field("password") password: String
     ) : Call<ResponseBody>
     @FormUrlEncoded
 
@@ -40,55 +50,114 @@ interface MyApi {
         @Field("password") password: String,
         @Field("user_type") user_type: String,
         @Field("certification_id") certification_id: String,
-        @Field("license_number") license_number:String,
-        @Field("pricing") pricing : Int
+        @Field("license_number") license_number:String
     ) : Call<ResponseBody>
-
     @GET("profile")
     fun getProfile(@Header("Authorization") authToken: String): Call<ResponseBody>
-
-
-
     @PUT("profile/update")
     fun updateProfile(
         @Header("Authorization") authToken: String,
         @Body profileUpdateRequest: ProfileUpdateRequest
     ): Call<ResponseBody>
-
     @GET("experts")
     fun getExperts(@Header("Authorization") authToken: String): Call<ExpertsResponse>
-
     @GET("surveyors")
     fun getSurveyors(@Header("Authorization") authToken: String): Call<SurveyorsResponse>
 
+
     @POST("request-consultation/expert")
     fun sendConsultationRequestExpert(
-        @Body consultationRequest: ConsultationRequest,
-        @Header("Authorization") authToken: String
-    ): Call<ResponseBody>
+        @Header("Authorization") token: String,
+        @Body consultationRequestExpert: ConsultationRequestExpert
+    ): Call<ConsultationResponse>
 
     @POST("request-consultation/surveyor")
     fun sendConsultationRequestSurveyor(
-        @Body consultationRequest: ConsultationRequestSurveyor,
-        @Header("Authorization") authToken: String
-    ): Call<ResponseBody>
+        @Header("Authorization") token: String,
+        @Body consultationRequestSurveyor: ConsultationRequestSurveyor
+    ): Call<ConsultationResponse>
 
     @GET("consultation/getAllRequests")
-    fun getAllRequests(@Header("Authorization")
-    authToken: String): Call<RequestsResponse>
+    fun getAllFinderRequests(
+        @Header("Authorization") token: String
+    ): Call<RequestResponse>
 
-    // PUT request to update consultation request
     @PUT("consultation/updateRequest/{id}")
     fun updateRequest(
-        @Header("Authorization") authToken: String,
-        @Path("id") id: String,           // Request ID
-        @Body requestUpdate: RequestUpdate // Body of the request
-    ): Call<ResponseBody>
+        @Header("Authorization") token: String,
+        @Path("id") id: String,
+        @Body updatedRequest: RequestUpdate  // Add this line for the request body
+    ): Call<UpdateResponse>
 
     @DELETE("consultation/deleteRequest/{id}")
     fun deleteRequest(
-        @Header("Authorization") authToken: String,
-        @Path("id") id: String) : Call<ResponseBody>
+        @Header("Authorization") token: String,
+        @Path("id") id: String
+    ): Call<DeleteResponse>  // Define DeleteResponse below
+
+    @GET("dashboard")
+    fun getDashboard(
+        @Header("Authorization") token: String
+    ): Call<DashboardResponse>
+
+
+    //FOR EXPERTS
+    @GET("consultation/requests/expert")
+    fun getExpertRequests(
+    @Header("Authorization") token: String):
+            Call<ConsultationRequestsResponse>
+
+    //FOR SURVEYORS
+    @GET("consultation/requests/surveyor")
+    fun getSurveyorRequests(
+        @Header("Authorization") token: String):
+            Call<ConsultationRequestsResponse>
+
+    @POST("consultation/accept/{id}")
+    fun acceptConsultationRequest(@Path("id") requestId: String, @Header("Authorization") token: String): Call<ConsultationAcceptDeclineResponse>
+
+    @POST("consultation/decline/{id}")
+    fun declineConsultationRequest(@Path("id") requestId: String, @Header("Authorization") token: String): Call<ConsultationAcceptDeclineResponse>
+
+
+    //FOR ADMIN
+    @GET("admin/dashboard")
+    fun getAdminDashboard(
+        @Header("Authorization") token: String
+    ): Call<DashboardResponse>
+
+    @POST("admin/postUpdate")
+    fun postAdminUpdate(
+        @Header("Authorization") token: String,
+        @Body update: Update): Call<UpdatePostResponse>
+
+    @PUT("admin/editUpdate/{id}")
+    fun editAdminUpdate(
+        @Path("id") id: String,
+        @Header("Authorization") token: String,
+        @Body update: Update): Call<UpdatePostResponse>
+
+    @DELETE("admin/deleteUpdate/{id}")
+    fun deleteAdminUpdate(
+        @Path("id") id: String,
+        @Header("Authorization") token: String
+    ):Call<ResponseBody>
+
+    @GET("admin/consultation-logs")
+    fun getLogs(
+        @Header("Authorization") token: String
+    ): Call<ConsultationLogResponse>
+
+    @GET("admin/getAllUsers")
+    fun getAllUsers(
+        @Header("Authorization") token: String
+    ): Call<UserResponse>
+
+    @DELETE("admin/deleteUser/{id}")
+    fun deleteUser(
+        @Path("id") id: String,
+        @Header("Authorization") token: String
+    ): Call<ResponseBody>
 
     companion object{
         operator  fun invoke(): MyApi{

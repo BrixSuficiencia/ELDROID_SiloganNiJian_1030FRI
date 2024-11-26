@@ -6,7 +6,7 @@
         <!-- DEFINE VIEW MODEL USING VARIABLE TAG -->
         <variable
             name="viewmodel"
-            type="com.sabal.terramasterhub.ui.auth.AuthViewModel" />
+            type="com.sabal.terramasterhub.data.viewmodel.AuthViewModel" />
     </data>
     <LinearLayout
         android:id="@+id/root_layout"
