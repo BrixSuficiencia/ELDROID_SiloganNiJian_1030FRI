@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -35,7 +36,7 @@ class LoginActivity : AppCompatActivity(), AuthListener {
 
         viewModel.authListener = this
 
-        val btnGoToRegister: Button = findViewById(R.id.btnGoToRegister)
+        val btnGoToRegister: TextView = findViewById(R.id.btnGoToRegister)
 
         progressBar = findViewById(R.id.progress_bar)
 
