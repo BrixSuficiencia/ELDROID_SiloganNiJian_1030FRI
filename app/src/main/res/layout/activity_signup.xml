@@ -20,7 +20,7 @@
             android:layout_width="153dp"
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/terramasterhubicon" />
 
         <!-- Sign Up Title -->
@@ -96,6 +96,7 @@
         <!-- User Type Input -->
         <Spinner
             android:id="@+id/et_user_type"
+            android:elevation="1dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_password"
@@ -106,6 +107,7 @@
         <!-- Certification ID -->
         <EditText
             android:id="@+id/et_certification_id"
+            android:elevation="1dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_user_type"
@@ -122,6 +124,7 @@
         <!-- License Number -->
         <EditText
             android:id="@+id/et_license_number"
+            android:elevation="1dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_certification_id"
@@ -155,6 +158,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_below="@id/btn_register"
+            android:elevation="1dp"
             android:gravity="center">
 
             <!-- Progress Bar -->
@@ -170,6 +174,7 @@
         <!-- Background Image -->
         <ImageView
             android:id="@+id/background_bottom"
+            android:elevation="0dp"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_alignParentBottom="true"
