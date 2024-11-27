@@ -63,7 +63,7 @@
                 android:background="@color/white"
                 android:hint="Email Address"
                 android:textSize="20sp"
-                android:layout_marginTop="40dp" />
+                android:layout_marginTop="15dp" />
 
             <!-- Password Input -->
             <EditText
@@ -100,16 +100,6 @@
                 android:textColor="#2C4434"
                 android:textSize="25sp"
                 android:onClick="@{viewmodel::onLoginButtonClick}" />
-
-            <!-- Progress Bar -->
-            <ProgressBar
-                android:id="@+id/progress_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/signInBtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:visibility="gone" />
         </RelativeLayout>
 
         <!-- Forgot Password and Sign-Up -->
@@ -119,18 +109,6 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:gravity="center">
-
-            <TextView
-                android:id="@+id/forgotpass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/clashforgrotesk"
-                android:text="Forgot Password"
-                android:textColor="#6B6805"
-                android:layout_marginEnd="20dp"
-                android:clickable="true"
-                android:textFontWeight="600"
-                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/signup"
@@ -143,6 +121,14 @@
                 android:textFontWeight="600"
                 android:textSize="18sp" />
         </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_height="wrap_content"/>
 
         <!-- Bottom Image -->
         <ImageView
