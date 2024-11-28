@@ -15,8 +15,8 @@
 
 ## Repository Link
 
-- **Android Repository Link**: [ELDROID_KotlinBois_-130FRI-](https://github.com/BrixSuficiencia/ELDROID_SiloganNiJian_1030FRI)
-- **Api Repository Link**: [ELPHP_KotlinBois_-130SAT-](https://github.com/Maylse/TerraMongoDbApi)
+- **Android Repository Link**: [ELDROID_SiloganNiJian_-1030FRI-](https://github.com/BrixSuficiencia/ELDROID_SiloganNiJian_1030FRI)
+- **Api Repository Link**: [No ELPHP-](https://github.com/Maylse/TerraMongoDbApi)
 
 
 ## Documentation (Google Docs Link)
