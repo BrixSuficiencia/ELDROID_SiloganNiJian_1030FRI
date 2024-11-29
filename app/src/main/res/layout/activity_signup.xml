@@ -95,14 +95,17 @@
 
         <!-- User Type Input -->
         <Spinner
-            android:id="@+id/et_user_type"
             android:elevation="1dp"
+            android:id="@+id/et_user_type"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:background="@color/white" />
+            android:background="@drawable/spinner_ds"
+            android:fontFamily="@font/generalsans_semibold"
+            android:popupBackground="@color/white" />
+
 
         <!-- Certification ID -->
         <EditText

@@ -3,15 +3,33 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/divider"
+    android:layout_marginTop="1dp"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="Update Title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textTitleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:text="Title: " />
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/textTitleView"
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Update Title" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textContent"

@@ -3,27 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <!-- Message Input -->
+    <TextView
+        android:textColor="@color/black"
+        android:fontFamily="@font/generalsans_semibold"
+        android:text="Message:"
+        android:id="@+id/textMessageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <EditText
+        android:background="@drawable/messagebox"
+        android:layout_below="@+id/textMessageView"
         android:id="@+id/editTextMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Message"
+        android:hint=" Message"
         android:inputType="textMultiLine"
         android:minLines="2" />
-
     <!-- Date Input -->
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:text="Date:"
+        android:id="@+id/dateView"
+        android:fontFamily="@font/generalsans_semibold"
+        android:layout_below="@+id/editTextMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <EditText
+        android:paddingStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/messagebox"
+        android:layout_below="@+id/editTextMessage"
+        android:layout_toEndOf="@+id/dateView"
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Date (YYYY-MM-DD)"
+        android:hint="(YYYY-MM-DD)"
         android:inputType="text" />
 
     <!-- Time Input -->
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textTimehrView"
+        android:fontFamily="@font/generalsans_semibold"
+        android:layout_below="@+id/editTextDate"
+        android:text="Time:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <EditText
+        android:paddingStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/messagebox"
+        android:layout_toEndOf="@+id/textTimehrView"
+        android:layout_below="@+id/editTextDate"
         android:id="@+id/editTextTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +73,22 @@
         android:inputType="text" />
 
     <!-- Location Input -->
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textLocationView"
+        android:fontFamily="@font/generalsans_semibold"
+        android:layout_below="@+id/editTextTime"
+        android:text="Location:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <EditText
+        android:paddingStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/messagebox"
+        android:layout_toEndOf="@+id/textLocationView"
+        android:layout_below="@+id/editTextTime"
         android:id="@+id/editTextLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,11 +96,28 @@
         android:inputType="text" />
 
     <!-- Rate Input -->
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textRateView"
+        android:fontFamily="@font/generalsans_semibold"
+        android:layout_below="@+id/editTextLocation"
+        android:text="Rate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <EditText
+        android:paddingStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/messagebox"
+        android:layout_toEndOf="@+id/textRateView"
+        android:layout_below="@+id/editTextLocation"
         android:id="@+id/editTextRate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Rate (in Peso)"
         android:inputType="numberDecimal" />
+
+    </RelativeLayout>
 
 </LinearLayout>

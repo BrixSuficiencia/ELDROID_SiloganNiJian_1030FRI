@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/requestdialog">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,6 +14,8 @@
 
         <!-- Message input -->
         <EditText
+            android:padding="5dp"
+            android:background="@drawable/messagebox"
             android:id="@+id/editTextMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,6 +24,9 @@
 
         <!-- Date input -->
         <EditText
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/messagebox"
             android:id="@+id/editTextDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +35,9 @@
 
         <!-- Time input -->
         <EditText
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/messagebox"
             android:id="@+id/editTextTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,6 +46,9 @@
 
         <!-- Location input -->
         <EditText
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/messagebox"
             android:id="@+id/editTextLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,6 +57,9 @@
 
         <!-- Rate input -->
         <EditText
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/messagebox"
             android:id="@+id/editTextRate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,4 +67,4 @@
             android:inputType="numberDecimal" />
 
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

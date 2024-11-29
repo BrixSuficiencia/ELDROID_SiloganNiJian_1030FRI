@@ -3,14 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.view.fragments.Fragment4">
+    tools:context=".data.view.fragments.Fragment4"
+    >
+
+    <TextView
+        android:fontFamily="@font/generalsans_semibold"
+        android:textColor="#939c1e"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text="My Request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <!-- RecyclerView for displaying the list of requests -->
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/recyclerViewRequests"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
         android:padding="16dp"/>
 
 </FrameLayout>

@@ -1,6 +1,8 @@
 package com.sabal.terramasterhub.data.view.fragments
 
 import android.app.AlertDialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -79,8 +81,7 @@ class Fragment3 : Fragment() {
         val rateEditText = dialogView.findViewById<EditText>(R.id.editTextRate)
 
         // Show the AlertDialog
-        AlertDialog.Builder(context)
-            .setTitle("Request Consultation")
+        AlertDialog.Builder(context, R.style.CustomAlertDialogTheme)
             .setView(dialogView)
             .setPositiveButton("Submit") { _, _ ->
                 val message = messageEditText.text.toString().trim()

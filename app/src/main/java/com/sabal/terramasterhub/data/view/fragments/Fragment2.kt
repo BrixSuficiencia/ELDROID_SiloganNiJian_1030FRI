@@ -1,5 +1,6 @@
 package com.sabal.terramasterhub.data.view.fragments
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -62,6 +63,7 @@ class Fragment2 : Fragment() {
     }
 
     // Function to show the consultation request dialog
+    @SuppressLint("MissingInflatedId")
     private fun showRequestConsultationDialog(expert: Expert) {
         val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_request_consultation, null)
 
@@ -73,8 +75,7 @@ class Fragment2 : Fragment() {
         val rateEditText = dialogView.findViewById<EditText>(R.id.editTextRate)
 
         // Show the AlertDialog
-        AlertDialog.Builder(context)
-            .setTitle("Request Consultation")
+        AlertDialog.Builder(context, R.style.CustomAlertDialogTheme)
             .setView(dialogView)
             .setPositiveButton("Submit") { _, _ ->
                 val message = messageEditText.text.toString().trim()

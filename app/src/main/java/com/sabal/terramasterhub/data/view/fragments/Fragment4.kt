@@ -79,8 +79,7 @@ class Fragment4 : Fragment() {
     // Show a dialog or new screen for consultation (placeholder function)
     private fun showRequestConsultationDialog(request: Request) {
         // Create an AlertDialog builder
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setTitle("Update Request")
+        val builder = AlertDialog.Builder(requireContext(), R.style.CustomAlertDialogTheme)
 
         // Inflate a custom layout for input fields
         val dialogView = layoutInflater.inflate(R.layout.dialog_update_request, null)

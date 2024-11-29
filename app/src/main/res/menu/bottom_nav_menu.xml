@@ -1,22 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_fragment1"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/footericon4"
         android:title="Profile" />
     <item
         android:id="@+id/nav_fragment2"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/expert"
         android:title="Experts" />
     <item
         android:id="@+id/nav_fragment3"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/surveyor"
         android:title="Surveyors" />
     <item
         android:id="@+id/nav_fragment4"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/reqlist"
         android:title="Request List" />
     <item
         android:id="@+id/nav_fragment5"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/dashboard"
         android:title="Dashboard" />
 </menu>
