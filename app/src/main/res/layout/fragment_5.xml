@@ -5,13 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".data.view.fragments.Fragment5">
 
-    <!-- RecyclerView to display the list of updates -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewUpdates"
+
+    <TextView
+        android:fontFamily="@font/generalsans_semibold"
+        android:textColor="#939c1e"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text="Updates"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:padding="16dp"
-        android:scrollbars="vertical" />
+        android:layout_height="wrap_content"/>
+
+        <!-- RecyclerView to display the list of updates -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/recyclerViewUpdates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:scrollbars="vertical" />
 
 </FrameLayout>

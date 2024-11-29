@@ -51,7 +51,7 @@ class ExpertAdapter(
     }
 
     private fun showExpertDialog(expert: Expert) {
-        val dialogBuilder = AlertDialog.Builder(context)
+        val dialogBuilder = AlertDialog.Builder(context, R.style.ExpertsAlertDialogTheme)
         dialogBuilder.setTitle("Expert Details")
         dialogBuilder.setMessage(
             """

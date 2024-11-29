@@ -2,84 +2,197 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/divider">
 
-    <!-- Message and Status -->
-    <TextView
-        android:id="@+id/textViewMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Message"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textViewStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Status"/>
+        <!-- Message and Status -->
+        <TextView
+            android:fontFamily="@font/generalsans_semibold"
+            android:id="@+id/textMessageView"
+            android:text="Message:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:padding="10dp"
+            android:background="@drawable/divider"
+            android:layout_below="@id/textMessageView"
+            android:id="@+id/textViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textSize="16sp"/>
 
-    <!-- Date and Time -->
-    <TextView
-        android:id="@+id/textViewDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:layout_below="@id/textViewMessage"
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"/>
 
-    <TextView
-        android:id="@+id/textViewTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/textStatus"
+            android:layout_below="@id/textViewMessage"
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"/>
+
+        <!-- Date and Time -->
+        <TextView
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:layout_below="@id/textViewStatus"
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/textDate"
+            android:layout_below="@id/textViewStatus"
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:layout_below="@id/textViewDate"
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time:"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/textTime"
+            android:layout_below="@id/textViewDate"
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"/>
 
 
-    <!-- Location and Rate -->
-    <TextView
-        android:id="@+id/textViewLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Location"/>
+        <!-- Location and Rate -->
+        <TextView
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:layout_below="@id/textViewTime"
+            android:id="@+id/textLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location:"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/textLocation"
+            android:layout_below="@id/textViewTime"
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"/>
 
-    <TextView
-        android:id="@+id/textViewRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rate"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:layout_below="@id/textViewLocation"
+            android:id="@+id/textRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate: "/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/textRate"
+            android:layout_below="@id/textViewLocation"
+            android:id="@+id/textViewRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate"/>
 
-    <!-- Expert and Surveyor Details -->
-    <TextView
-        android:id="@+id/textViewExpertName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Expert Name"/>
+        <!-- Expert and Surveyor Details -->
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/textViewRate"
+            android:id="@+id/textViewExpertName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expert Name"/>
 
-    <TextView
-        android:id="@+id/textViewSurveyorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Surveyor Name"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/textViewExpertName"
+            android:id="@+id/textViewSurveyorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surveyor Name"/>
 
-    <!-- Updated and Created At -->
-    <TextView
-        android:id="@+id/textViewUpdatedAt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Updated At"/>
+        <!-- Updated and Created At -->
 
-    <TextView
-        android:id="@+id/textViewCreatedAt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Created At"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/generalsans_semibold"
+            android:id="@+id/createat"
+            android:layout_below="@id/textViewMessage"
+            android:text="Created at:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/createat"
+            android:layout_below="@id/textViewMessage"
+            android:id="@+id/textViewCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created at"/>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/generalsans_semibold"
+            android:id="@+id/updateat"
+            android:layout_below="@id/textViewCreatedAt"
+            android:text="Updated at:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/updateat"
+            android:layout_below="@id/textViewCreatedAt"
+            android:id="@+id/textViewUpdatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated at"/>
+
+    </RelativeLayout>
 
     <!-- Buttons aligned horizontally -->
     <LinearLayout
+        android:fontFamily="@font/generalsans_semibold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="end">
 
         <Button
+            android:fontFamily="@font/generalsans_semibold"
+            android:background="@drawable/buttons"
             android:id="@+id/updateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,6 +200,8 @@
             android:layout_marginEnd="8dp"/>
 
         <Button
+            android:fontFamily="@font/generalsans_semibold"
+            android:background="@drawable/buttons"
             android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -51,7 +51,7 @@ class SurveyorAdapter(
     }
 
     private fun showSurveyorDialog(surveyor: Surveyor) {
-        val dialogBuilder = AlertDialog.Builder(context)
+        val dialogBuilder = AlertDialog.Builder(context, R.style.ExpertsAlertDialogTheme)
         dialogBuilder.setTitle("Surveyor Details")
         dialogBuilder.setMessage(
             """

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -56,7 +57,7 @@ class Fragment1 : Fragment(R.layout.fragment_1) {
             showEditProfileDialog(nameTextView.text.toString(), emailTextView.text.toString())
         }
 
-        val btnLogout: Button = view.findViewById(R.id.btnLogout)
+        val btnLogout: ImageView = view.findViewById(R.id.btnLogout)
         btnLogout.setOnClickListener {
             logout()
         }
