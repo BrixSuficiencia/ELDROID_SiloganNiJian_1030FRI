@@ -42,7 +42,7 @@ class SignupActivity : AppCompatActivity(), AuthListener {
         licenseNumberEditText = findViewById(R.id.et_license_number)
 
         // Initialize user types
-        val userTypes = arrayOf("Finder", "Expert", "Surveyor")
+        val userTypes = arrayOf("Finder", "expert", "surveyor")
 
         // Set up the Spinner with an ArrayAdapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, userTypes)
