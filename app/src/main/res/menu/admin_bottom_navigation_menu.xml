@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/footericon4"
         android:title="Profile" />
     <item
         android:id="@+id/nav_dashboard"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/dashboard"
         android:title="Dashboard" />
     <item
         android:id="@+id/nav_consultations_logs"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/consultations"
         android:title="Logs" />
     <item
         android:id="@+id/nav_users"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/reqlist"
         android:title="Users" />
 </menu>

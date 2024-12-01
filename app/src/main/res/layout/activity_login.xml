@@ -62,6 +62,7 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/generalsans_semibold"
                 android:background="@color/white"
+                android:singleLine="true"
                 android:hint="Email Address"
                 android:textSize="20sp"
                 android:layout_marginTop="15dp" />
@@ -74,6 +75,7 @@
                 android:padding="15dp"
                 android:maxLines="1"
                 android:layout_marginTop="20dp"
+                android:singleLine="true"
                 android:layout_below="@+id/edtEmail"
                 android:layout_centerHorizontal="true"
                 android:ems="10"

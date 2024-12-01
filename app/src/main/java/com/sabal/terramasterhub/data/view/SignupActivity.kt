@@ -42,7 +42,7 @@ class SignupActivity : AppCompatActivity(), AuthListener {
         licenseNumberEditText = findViewById(R.id.et_license_number)
 
         // Initialize user types
-        val userTypes = arrayOf("Finder", "expert", "surveyor")
+        val userTypes = arrayOf("finder", "expert", "surveyor")
 
         // Set up the Spinner with an ArrayAdapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, userTypes)
@@ -56,7 +56,7 @@ class SignupActivity : AppCompatActivity(), AuthListener {
                 viewModel.user_type = selectedUserType
 
                 // Show or hide EditTexts based on the selected user type
-                if (selectedUserType == "Finder") {
+                if (selectedUserType == "finder") {
                     certificationIdEditText.visibility = View.GONE
                     licenseNumberEditText.visibility = View.GONE
                 } else {
