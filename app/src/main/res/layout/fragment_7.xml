@@ -6,20 +6,25 @@
     tools:context=".data.view.fragments.Fragment5">
 
     <!-- Add Update Button -->
+
+    <!-- RecyclerView to display the list of updates -->
     <Button
         android:id="@+id/buttonAddUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Update"
         android:layout_gravity="top|start"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:background="@color/yellow_green"
+        android:text="Add Update" />
 
-    <!-- RecyclerView to display the list of updates -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewUpdates"
+        android:padding="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="64dp"
-        android:padding="16dp"
+        tools:listitem="@layout/item_admin_update"
         android:scrollbars="vertical" />
 </FrameLayout>
